@@ -78,7 +78,6 @@ class Head(Turtle):
       self.direction = "right"
       self.turn_tick = self.ticks
     
-
   def move(self, apple, body):
 
     self.clear()
