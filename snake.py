@@ -93,8 +93,8 @@ class Head(Turtle):
     if self.xcor() == 320 or self.xcor() == -320 or self.ycor() == 320 or self.ycor() == -320:
       self.die()
 
-    for index in range(len(body) - 1, 0, -1):
-      body[index].move(previous_positions[index - 1])
+    for i in range(len(body) - 1, 0, -1):
+      body[i].move(previous_positions[i - 1])
 
     for segment in body[1:]:
       if self.distance(segment) < 20:
@@ -112,7 +112,7 @@ class Head(Turtle):
 
     self.alive = False
     
-    pass
+    
 
 
 class Segment(Turtle):
