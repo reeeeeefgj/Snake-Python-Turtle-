@@ -81,7 +81,9 @@ class Head(Turtle):
   def move(self, apple, body):
 
     self.clear()
-    previous_positions = [(segment.xcor(), segment.ycor()) for segment in body]
+    previous_positions = []
+    for segment in body:
+      previous_positions.append((segment.xcor(), segment.ycor()))
     if self.processingdirections:
       next_direction = self.processingdirections[-1]
       if next_direction != self.direction and next_direction != self.opposite_direction[self.direction]:
